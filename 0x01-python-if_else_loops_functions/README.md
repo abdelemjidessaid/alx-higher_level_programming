@@ -22,4 +22,6 @@
 >
 > - `9-print_last_digit.py` This program prints last digit of a number.
 >
+> - `10-add.py` Function that returns the summation of two integer numbers.
+>
 > - ``
