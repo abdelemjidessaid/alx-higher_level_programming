@@ -24,4 +24,6 @@
 >
 > - `10-add.py` Function that returns the summation of two integer numbers.
 >
+> - `11-pow.py` Function that computes a to the power of b and return the value.
+>
 > - ``
