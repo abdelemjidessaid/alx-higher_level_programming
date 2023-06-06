@@ -20,4 +20,6 @@
 >
 > - `8-uppercase.py` This program prints a string in uppercase.
 >
+> - `9-print_last_digit.py` This program prints last digit of a number.
+>
 > - ``
