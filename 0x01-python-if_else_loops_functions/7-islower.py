@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-
 def islower(c):
-    if c == '':
-        return (None)
-    code = ord(c)
-    return (code >= 97 and code <= 122)
+    lower = ord(c)
+
+    if lower in range(97, 123):
+        return (True)
+    else:
+        return (False)
