@@ -12,4 +12,6 @@
 >
 > - `4-print_hexa.py` This program prints decimal and hexadecimal from 0 to 98 as this example  ___0 = 0x0___.
 >
+> - `5-print_comb2.py` This program prints numbers from 0 to 99 in this format ___00 ... 99___.
+>
 > - ``
