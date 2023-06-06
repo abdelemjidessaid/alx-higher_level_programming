@@ -3,4 +3,4 @@
 string = ""
 for i in range(97, 123):
     string += chr(i)
-print(f"{string}", end="")
+print("{}".format(string), end="")
