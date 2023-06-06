@@ -16,4 +16,6 @@
 >
 > - `6-print_comb3.py` This program prints all possible different combinations of two digits.
 >
+> - `7-islower.py` This program check if characters is lowercase or uppercase.
+>
 > - ``
