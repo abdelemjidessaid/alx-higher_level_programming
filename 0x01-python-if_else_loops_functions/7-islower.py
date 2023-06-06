@@ -2,6 +2,6 @@
 
 def islower(c):
     if c == '':
-        return (False)
+        return (None)
     code = ord(c)
     return (code >= 97 and code <= 122)
