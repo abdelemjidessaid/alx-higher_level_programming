@@ -4,4 +4,6 @@
 
 > - `0-positive_or_negative.py` This program prints the status of random numbers (positive, negative, is zero).
 >
+> - `1-last_digit.py` This program prints the last digit of a random number.
+>
 > - ``
