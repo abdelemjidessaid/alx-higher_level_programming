@@ -6,4 +6,6 @@
 >
 > - `1-last_digit.py` This program prints the last digit of a random number.
 >
-> - ``
+> - `2-print_alphabet.py` This program prints all alphabets in lowercase.
+>
+> - `3-print_alphabt.py` This program prints all alphabets in lowercase except 'e' and 'q'.
