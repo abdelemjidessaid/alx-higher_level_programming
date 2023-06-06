@@ -26,4 +26,6 @@
 >
 > - `11-pow.py` Function that computes a to the power of b and return the value.
 >
+> - `12-fizzbuzz.py` Function hat prints the numbers from 1 to 100 separated by a space.
+>
 > - ``
