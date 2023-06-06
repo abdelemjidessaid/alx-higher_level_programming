@@ -9,3 +9,7 @@
 > - `2-print_alphabet.py` This program prints all alphabets in lowercase.
 >
 > - `3-print_alphabt.py` This program prints all alphabets in lowercase except 'e' and 'q'.
+>
+> - `4-print_hexa.py` This program prints decimal and hexadecimal from 0 to 98 as this example  ___0 = 0x0___.
+>
+> - ``
