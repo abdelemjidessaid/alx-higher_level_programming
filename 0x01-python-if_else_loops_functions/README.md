@@ -18,4 +18,6 @@
 >
 > - `7-islower.py` This program check if characters is lowercase or uppercase.
 >
+> - `8-uppercase.py` This program prints a string in uppercase.
+>
 > - ``
