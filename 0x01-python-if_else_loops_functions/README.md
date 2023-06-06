@@ -14,4 +14,6 @@
 >
 > - `5-print_comb2.py` This program prints numbers from 0 to 99 in this format ___00 ... 99___.
 >
+> - `6-print_comb3.py` This program prints all possible different combinations of two digits.
+>
 > - ``
