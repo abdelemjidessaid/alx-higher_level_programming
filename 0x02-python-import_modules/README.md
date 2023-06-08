@@ -6,4 +6,6 @@
 >
 > - `1-calculation.py` Program that imports functions from the file `calculator_1.py`, does some Maths, and prints the result.
 >
+> - `2-args.py` Program that prints its arguments that passed from command line.
+>
 > - ``
