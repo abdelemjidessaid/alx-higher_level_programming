@@ -9,4 +9,4 @@ def multiple_returns(sentence):
     else:
         length = len(sentence)
         first = "None" if length == 0 else sentence[0]
-    return ((length, first))    
+    return ((length, first))
