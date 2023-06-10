@@ -2,13 +2,11 @@
 
 def print_matrix_integer(matrix=[[]]):
     out = len(matrix)
-    if not matrix:
-        print("")
-        return
     for x in range(out):
         i = len(matrix[x])
         for y in range(i):
             if y < i - 1:
                 print("{:d}".format(matrix[x][y]), end=" ")
             else:
-                print("{:d}".format(matrix[x][y]))
+                print("{:d}".format(matrix[x][y]), end="")
+        print()
