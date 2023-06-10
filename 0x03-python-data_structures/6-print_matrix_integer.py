@@ -2,6 +2,8 @@
 
 def print_matrix_integer(matrix=[[]]):
     out = len(matrix)
+    if not matrix:
+        return
     for x in range(out):
         i = len(matrix[x])
         for y in range(i):
