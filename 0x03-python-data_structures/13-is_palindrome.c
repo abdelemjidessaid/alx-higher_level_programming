@@ -1,49 +1,68 @@
 #include "lists.h"
 
 /**
+ * reverse - function that reverses a given singly linked lists.
+ * @head: pointer of pointer to the first node in the list.
+ * Return: void.
+ */
+void reverse(listint_t **head)
+{
+	listint_t *prev = NULL, *current = *head, *next = NULL;
+
+	while (current)
+	{
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
+	}
+
+	*head = prev;
+}
+
+/**
  * is_palindrome - function that check if a signly linked list is a palindrome.
  * @head: pointer of pointer to the head of the singly linked list.
  * Return: 1 if it is a palindrom, 0 otherwise;
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *slow = *head, *fast = *head, *prev = NULL;
-	listint_t *curr = slow, *next, *first = *head, *second = prev;
+	listint_t *slow = *head, *fast = *head, *tmp = *head, *pointer = NULL;
 
-	if (!fast || !fast->next)
+	if (*head == NULL || (*head)->next == NULL)
 		return (1);
 
-	while (fast != NULL && fast->next != NULL)
+	while (1)
 	{
-		slow = slow->next;
 		fast = fast->next->next;
+		if (!fast)
+		{
+			pointer = slow->next;
+			break;
+		}
+		if (!fast->next)
+		{
+			pointer = slow->next->next;
+			break;
+		}
+		slow = slow->next;
 	}
 
-	while (curr != NULL)
-	{
-		next = curr->next;
-		curr->next = prev;
-		prev = curr;
-		curr = next;
-	}
+	reverse(&pointer);
 
-	while (first != NULL && second != NULL)
+	while (pointer && tmp)
 	{
-		if (first->n != second->n)
+		if (tmp->n == pointer->n)
+		{
+			pointer = pointer->next;
+			tmp = tmp->next;
+		}
+		else
 			return (0);
-		first = first->next;
-		second = second->next;
 	}
 
-	prev = NULL;
-	curr = slow;
-	while (curr != NULL)
-	{
-		next = curr->next;
-		curr->next = prev;
-		prev = curr;
-		curr = next;
-	}
+	if (!pointer)
+		return (1);
 
-	return (1);
+	return (0);
 }
