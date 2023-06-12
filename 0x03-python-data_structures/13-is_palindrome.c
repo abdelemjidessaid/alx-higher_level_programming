@@ -11,7 +11,7 @@ int is_palindrome(listint_t **head)
 	listint_t *curr = slow, *next, *first = *head, *second = prev;
 
 	if (!fast || !fast->next)
-		return (0);
+		return (1);
 
 	while (fast != NULL && fast->next != NULL)
 	{
