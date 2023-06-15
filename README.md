@@ -10,4 +10,8 @@
 >
 > - `0x03-python-data_structures` In this project we will solve tasks about __Lists, Tuples, Sets__
 >
+> - `0x04-python-more_data_structures` In this project we will solve tasks about __dictionaries, lambda, filter, reduce__
+>
+> - `0x17-doubly_linked_lists` In this project we will solve tasks about __Doubly linked lists__ in C language.
+>
 > - ``
