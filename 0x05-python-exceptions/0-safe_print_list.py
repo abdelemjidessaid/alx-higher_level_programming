@@ -8,10 +8,11 @@ def safe_print_list(my_list=[], x=0):
             print("{}".format(my_list[i]), end="")
             counter += 1
         print("")
-    except:
+    except Exception as e:
         print("")
         return (counter)
     return (counter)
 
+
 if (__name__ == "__main"):
-        safe_print_list()
+    safe_print_list()
