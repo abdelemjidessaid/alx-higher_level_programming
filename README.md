@@ -14,4 +14,6 @@
 >
 > - `0x05-python-exceptions` Tasks about __Exceptions__ in Python
 >
+> - `0x06-python-classes Tasks about __Classes__ in Python
+>
 > - ``
