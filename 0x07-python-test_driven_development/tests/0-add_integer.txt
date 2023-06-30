@@ -1,0 +1,6 @@
+>>> add_integer(15, 5)
+20
+>>> add_integer('a', 5)
+TypeError: a must be an integer
+>>> add_integer(10.5, 12)
+22
