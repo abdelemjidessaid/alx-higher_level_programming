@@ -8,4 +8,4 @@
 
 * `2-rectangle.py` This file contains a class that defines a rectangle by: (based on 1-rectangle.py).
 
-* ``
+* `3-rectangle.py` This file contains a class that defines a rectangle by: (based on 2-rectangle.py).
