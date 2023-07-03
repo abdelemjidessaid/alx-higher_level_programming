@@ -4,4 +4,5 @@
 
 * `0-rectangle.py` This file contains an empty class `Rectangle` that defines a rectangle.
 
-* 
+* `1-rectangle.py` This file contains a class that defines a rectangle by: (based on 0-rectangle.py).
+
