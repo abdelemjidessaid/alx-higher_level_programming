@@ -15,3 +15,5 @@
 * `5-rectangle.py` This file contains a class that defines a rectangle by: (based on 4-rectangle.py).
 
 * `6-rectangle.py` This file contains a class that defines a rectangle by: (based on 5-rectangle.py).
+
+* `7-rectangle.py` This file contains a class that defines a rectangle by: (based on 6-rectangle.py).
