@@ -27,8 +27,7 @@ class Rectangle:
     def width(self, value):
         """This is a setter method that sets a new value to width var.
             Args:
-                width (int): new value that should sets to width var.
-            Return: None.
+                value (int): new value that should sets to width var.
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -48,8 +47,7 @@ class Rectangle:
     def height(self, value):
         """This is a setter method that sets a new value to height var.
             Args:
-                height (int): new value that should sets to height var.
-            Return: None.
+                value (int): new value that should sets to height var.
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
