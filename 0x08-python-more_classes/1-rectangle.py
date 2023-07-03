@@ -1,56 +1,59 @@
 #!/usr/bin/python3
-
-"""Class Rectangle is an empty class."""
+"""
+Create a rectangle class
+"""
 
 
 class Rectangle:
-    """Rectangle is a class that defines a rectangle."""
+    """
+    The class rectangle
+    """
 
     def __init__(self, width=0, height=0):
-        """As constructure that initializes the attributes.
-            Args:
-                width (int): initializing the width variable.
-                height (int): initializing the height variable.
-        """
+        """ Initialize rectangles """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """This is a getter method, that retrieves the value of width
-            Return:
-                width (int): the value in width var.
+        """
+        The width getter
+        Returns the self width
         """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """This is a setter method that sets a new value to width var.
-            Args:
-                value (int): new value that should sets to width var.
+        """
+        defining the width setter
+        Raise a TypeError and ValueError if some conditions are not met
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if (value < 0):
-            ValueError("width must be >= 0")
+
+        if value < 0:
+            raise ValueError("width must be >= 0")
+
         self.__width = value
 
     @property
     def height(self):
-        """This is a getter method, that retrieves the value of height
-            Return:
-                height (int): the value in width var.
+        """
+        The height getter
+        Returns the height
         """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """This is a setter method that sets a new value to height var.
-            Args:
-                value (int): new value that should sets to height var.
+        """
+        The height setter
+        Raise a TypeError and ValueError if soe conditions are not met
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        if (value < 0):
-            ValueError("height must be >= 0")
+
+        if value < 0:
+            raise ValueError("height must be >= 0")
+
         self.__height = value
