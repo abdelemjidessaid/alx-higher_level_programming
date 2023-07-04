@@ -173,3 +173,37 @@
     guillaume@ubuntu:~/0x09$ 
     ```
 
+* (20-answer.txt)[] Is a a tuple? Answer with Yes or No.
+    ```
+    a = ()
+    ```
+
+* (20-answer.txt)[] Is a a tuple? Answer with Yes or No.
+    ```
+    a = (1, 2)
+    ```
+
+* (22-answer.txt)[] Is a a tuple? Answer with Yes or No.
+    ```
+    a = (1)
+    ```
+
+* (23-answer.txt)[] Is a a tuple? Answer with Yes or No.
+    ```
+    a = (1, )
+    ```
+
+* (24-answer.txt)[] What does this script print?
+    ```
+    a = (1)
+    b = (1)
+    a is b
+    ```
+
+* (25-answer.txt)[] What does this script print?
+    ```
+    a = (1, 2)
+    b = (1, 2)
+    a is b
+    ```
+
