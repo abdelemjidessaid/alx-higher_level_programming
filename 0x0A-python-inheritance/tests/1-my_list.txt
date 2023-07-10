@@ -1,0 +1,96 @@
+The `1-my_list.py` Module
+=========================
+
+Using `MyList`
+=============
+
+Importing the function from the Module:
+
+    >>> MyList = __import__("1-my_list.py").MyList
+
+
+Checking the Module docstring:
+    >>> docs = __import__("1-my_list.py").__doc__
+    >>> len(docs) > 1
+    True
+
+
+Checking the class docstring:
+    >>> docs = __import__("1-my_list.py").MyList.__doc__
+    >>> len(docs) > 1
+    True
+
+
+Checking the method docstring:
+    >>> docs = __import__("1-my_list.py").MyList.my_list.__doc__
+    >>> len(docs) > 1
+    True
+
+
+Checking the inheritance if MyList is subclass of list:
+    >>> MyList = __import__("1-my_list.py").MyList
+    >>> issubclass(MyList, list)
+    True
+
+
+Checking instanciation of MyList:
+    >>> MyList = __import__("1-my_list.py").MyList
+    >>> my_list = MyList()
+    >>> print(my_list)
+    []
+
+
+Checking empty list of MyList:
+    >>> MyList = __import__("1-my_list.py").MyList
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
+
+
+Checking appending to list:
+    >>> MyList = __import__("1-my_list.py").MyList
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(7)
+    >>> my_list.append(5)
+    >>> my_list.append(3)
+    >>> print(my_list)
+    [1, 7, 5, 3]
+
+
+Checking the sorting of list:
+    >>> MyList = __import__("1-my_list.py").MyList
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(7)
+    >>> my_list.append(5)
+    >>> my_list.append(3)
+    >>> my_list.print_sorted()
+    [1, 3, 5, 7]
+
+
+Checking one negative number:
+    >>> MyList = __import__("1-my_list.py").MyList
+    >>> my_list = MyList()
+    >>> my_list.append(-1)
+    >>> my_list.append(7)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [-1, 7, 5]
+
+
+Checking all negative numbers:
+    >>> MyList = __import__("1-my_list.py").MyList
+    >>> my_list = MyList()
+    >>> my_list.append(-1)
+    >>> my_list.append(-7)
+    >>> my_list.append(-5)
+    >>> print(my_list)
+    [-1, -7, -5]
+
+
+Checking for too many arguments:
+
+	Traceback (most recent call last):
+	...
+	TypeError: print_sorted() takes 1 positional argument but 2 were given
