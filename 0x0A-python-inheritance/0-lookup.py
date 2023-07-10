@@ -6,9 +6,9 @@
 def lookup(obj):
     """
     Function that prints all attributes of an given object.
-    
+
     Args:
-		obj (object): the given object.
+        obj (object): the given object.
 
     Return: list of attributes.
     """
