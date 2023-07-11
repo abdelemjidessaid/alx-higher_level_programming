@@ -16,4 +16,4 @@
 
 * `6-load_from_json_file.py` A function that creates an Object from a `JSON` file.
 
-* ``
+* `7-add_item.py` 

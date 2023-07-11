@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-    Function of
+    Function of save_to_json_file
 """
 
 
