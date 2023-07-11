@@ -12,4 +12,6 @@
 
 * `4-from_json_string.py` A function that returns an object (`Python data structure`) represented by a `JSON` string.
 
+* `5-save_to_json_file.py` A function that writes an `Object` to a text file, using a `JSON` representation.
+
 * ``
