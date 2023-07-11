@@ -11,8 +11,6 @@ def read_file(filename=""):
         Args:
             filename (str): path of file.
     """
-    if (filename == ""):
-        return
     with open(filename, "r", encoding="utf-8") as file:
         for i in file:
-            print(i)
+            print(i, end="")
