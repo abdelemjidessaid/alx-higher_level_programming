@@ -51,5 +51,5 @@ class Student:
                 json (dict): contains the new values
                 attributes.
         """
-        for key, value in json.keys():
+        for key, value in json.items():
             self.__dict__[key] = value
