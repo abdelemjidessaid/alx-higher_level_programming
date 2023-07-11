@@ -12,5 +12,14 @@ def read_file(filename=""):
             filename (str): path of file.
     """
     with open(filename, "r", encoding="utf-8") as file:
-        for i in file:
-            print(i, end="")
+        # I used this method
+        line = file.readline()
+        while (line != ""):
+            print(line, end="")
+            line = file.readline()
+        # Instead of this method
+        """
+            for i in file:
+                print(i, end="")
+        """
+        # Both are true bytheway.
