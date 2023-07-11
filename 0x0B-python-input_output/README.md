@@ -20,4 +20,5 @@
 
 * `8-class_to_json.py` function that returns the dictionary description with simple data structure (`list`, `dictionary`, `string`, `integer` and `boolean`) for `JSON` serialization of an object.
 
-* ``
+* `9-student.py` A class Student that defines a student by:
+    Public instance attributes: `first_name`, `last_name`, `age`
