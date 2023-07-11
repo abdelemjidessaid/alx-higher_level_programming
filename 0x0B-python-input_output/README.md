@@ -16,4 +16,8 @@
 
 * `6-load_from_json_file.py` A function that creates an Object from a `JSON` file.
 
-* `7-add_item.py` 
+* `7-add_item.py` script that adds all arguments to a Python list, and then save them to a `JSON` file.
+
+* `8-class_to_json.py` function that returns the dictionary description with simple data structure (`list`, `dictionary`, `string`, `integer` and `boolean`) for `JSON` serialization of an object.
+
+* ``
