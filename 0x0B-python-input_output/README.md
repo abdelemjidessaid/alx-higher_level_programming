@@ -25,4 +25,6 @@
 
 * `10-student.py` class `Student` that defines a student by: (based on `9-student.py`).
 
+* `11-student.py` class `Student` that defines a student by: (based on `10-student.py`).
+
 * ``
