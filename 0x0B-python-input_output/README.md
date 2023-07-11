@@ -27,4 +27,5 @@
 
 * `11-student.py` class `Student` that defines a student by: (based on `10-student.py`).
 
-* ``
+* `12-main.py` A Function `def pascal_triangle(n):` that returns a list of lists of integers representing the Pascal’s triangle of n.
+
