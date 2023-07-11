@@ -3,7 +3,6 @@
 """
     Function that converts objects to json
 """
-import json
 
 
 def class_to_json(obj):
@@ -17,4 +16,4 @@ def class_to_json(obj):
             the json code that is created from obj.
     """
 
-    return (json.dumps(obj.__dict__))
+    return (obj.__dict__)
