@@ -22,3 +22,7 @@
 
 * `9-student.py` A class Student that defines a student by:
     Public instance attributes: `first_name`, `last_name`, `age`
+
+* `10-student.py` class `Student` that defines a student by: (based on `9-student.py`).
+
+* ``
