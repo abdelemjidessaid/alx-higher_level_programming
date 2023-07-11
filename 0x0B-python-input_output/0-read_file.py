@@ -12,7 +12,5 @@ def read_file(filename=""):
             filename (str): path of file.
     """
     with open(filename, "r", encoding="utf-8") as file:
-        line = file.readline()
-        while (len(line) > 0):
-            print(line)
-            line = file.readline()
+        for i in file:
+            print(i)
