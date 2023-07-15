@@ -35,7 +35,7 @@ class Base:
                 list_objs (list): list of objects.
         """
         if (list_objs is None):
-            with open("<Class name>.json", "w", encoding="utf-8") as file:
+            with open(f"{cls.__name__}.json", "w", encoding="utf-8") as file:
                 file.write("[]\n")
         else:
             with open(f"{type(list_objs[0]).__name__}.json",
@@ -61,6 +61,7 @@ class Base:
             Return:
                 instance with its attributes and values.
         """
+        dummy = None
         if (cls.__name__ == "Rectangle"):
             dummy = cls(1, 1)
         if (cls.__name__ == "Square"):
