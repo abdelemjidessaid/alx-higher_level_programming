@@ -1,6 +1,8 @@
 """ The base module """
 import json
 import csv
+import turtle
+import random
 
 
 class Base:
@@ -40,7 +42,9 @@ class Base:
                       "w", encoding="utf-8") as file:
                 file.write("[")
                 for i in range(len(list_objs)):
-                    file.write(cls.to_json_string(list_objs[i].to_dictionary()))
+                    file.write(
+                        cls.to_json_string(list_objs[i].to_dictionary())
+                        )
                     if (i < len(list_objs) - 1):
                         file.write(", ")
                 file.write("]")
@@ -83,7 +87,7 @@ class Base:
             for i in range(len(dictionary)):
                 instances.append(cls.create(**dictionary[i]))
             return (instances)
-        except:
+        except Exception as e:
             return ([])
 
     @classmethod
@@ -128,12 +132,12 @@ class Base:
             list_instances = []
             for i in range(len(a_list)):
                 list_instances.append(cls.create(**a_list[i]))
-        except:
+        except Exception as e:
             list_instances = []
 
         return list_instances
 
-    #--------------------- static methods --------------------
+    # --------------------- static methods --------------------
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -164,3 +168,46 @@ class Base:
                 list of objects.
         """
         return (json.loads(json_string))
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+            Function that draws shapes (Rectangle, Square).
+
+            Args:
+                list_rectangle (list): list of rectangle objects.
+                list_square (list): list of square objects.
+        """
+        colors = [
+            "red", "green", "blue", "black",
+            "gray", "yellow", "purple"
+            ]
+        window = turtle.Turtle()
+        window.pensize(3)
+
+        # lets draw recrangles.
+        for rectangle in list_rectangles:
+            index = random.randint(0, len(colors) - 1)
+            window.penup()
+            window.goto(rectangle.x, rectangle.y)
+            window.pendown()
+            window.color(colors[index])
+            for i in range(4):
+                if (i == 1 or i == 3):
+                    window.forward(rectangle.height)
+                    window.left(90)
+                else:
+                    window.forward(rectangle.width)
+                    window.left(90)
+
+        # lets draw squares.
+        for square in list_squares:
+            index = random.randint(0, len(colors) - 1)
+            window.penup()
+            window.goto(square.x, square.y)
+            window.pendown()
+            window.color(colors[index])
+            for i in range(4):
+                window.forward(square.size)
+                window.left(90)
+        turtle.done()
