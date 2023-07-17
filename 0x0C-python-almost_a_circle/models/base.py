@@ -36,9 +36,9 @@ class Base:
             Args:
                 list_objs (list): list of objects.
         """
-        if (list_objs is None):
+        if (not list_objs):
             with open(f"{cls.__name__}.json", "w", encoding="utf-8") as file:
-                file.write("[]\n")
+                file.write("[]")
         else:
             with open(f"{type(list_objs[0]).__name__}.json",
                       "w", encoding="utf-8") as file:
