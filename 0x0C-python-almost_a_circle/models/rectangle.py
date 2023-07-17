@@ -22,9 +22,15 @@ class Rectangle(Base):
         """
 
         super().__init__(id)
+        self.validateType("width", width)
+        self.validateValue("width", width)
         self.__width = width
+        self.validateType("height", height)
+        self.validateValue("height", height)
         self.__height = height
+        self.validateValue("x", x)
         self.__x = x
+        self.validateValue("y", y)
         self.__y = y
 
     def __str__(self):
