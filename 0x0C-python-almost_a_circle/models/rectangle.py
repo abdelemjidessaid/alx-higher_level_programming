@@ -22,6 +22,12 @@ class Rectangle(Base):
         """
 
         super().__init__(id)
+        self.checkType("width", width)
+        self.checkValue("width", width)
+        self.checkType("height", height)
+        self.checkValue("height", height)
+        self.checkValue("x", x)
+        self.checkValue("y", y)
         self.__width = width
         self.__height = height
         self.__x = x
@@ -38,7 +44,7 @@ class Rectangle(Base):
                 .format(self.id, self.__x, self.__y,
                         self.__width, self.__height))
 
-    def validation(self, name, value):
+    def checkType(self, name, value):
         """
             Function that validates the datatypes and data.
 
@@ -48,12 +54,22 @@ class Rectangle(Base):
         """
         if (type(value) != int):
             raise TypeError(f"{name} must be an integer")
+
+    def checkValue(self, name, value):
+        """
+            Function that validates the values of variables.
+
+            Args:
+                name (str): the variable name.
+                value (int): the variable value.
+        """
         if (name == "x" or name == "y"):
             if (value < 0):
-                ValueError(f"{name} must be >= 0")
+                raise ValueError(f"{name} must be >= 0")
         else:
             if (value <= 0):
-                ValueError(f"{name} must be > 0")
+                raise ValueError(f"{name} must be > 0")
+            
 
     def area(self):
         """
@@ -137,7 +153,8 @@ class Rectangle(Base):
             Args:
                 value (int): the new value of width.
         """
-        self.validation("width", value)
+        self.checkType("width", value)
+        self.checkValue("width", value)
         self.__width = value
 
     @property
@@ -158,7 +175,8 @@ class Rectangle(Base):
             Args:
                 value (int): the new value of height.
         """
-        self.validation("height", value)
+        self.checkType("height", value)
+        self.checkValue("height", value)
         self.__height = value
 
     @property
@@ -179,7 +197,8 @@ class Rectangle(Base):
             Args:
                 value (int): the new value of x attribute.
         """
-        self.validation("x", value)
+        self.checkType("x", value)
+        self.checkValue("x", value)
         self.__x = value
 
     @property
@@ -200,5 +219,6 @@ class Rectangle(Base):
             Args:
                 value (int): the new value of y attr.
         """
-        self.validation("y", value)
+        self.checkType("y", value)
+        self.checkValue("y", value)
         self.__y = value
