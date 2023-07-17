@@ -53,7 +53,7 @@ class Rectangle(Base):
                 name (str): the name of attribute.
                 value (int): the value of attribute.
         """
-        if (not isinstance(value, int)):
+        if (type(value) != int):
             raise TypeError(f"{name} must be an integer")
 
     def validateValue(self, name, value):
