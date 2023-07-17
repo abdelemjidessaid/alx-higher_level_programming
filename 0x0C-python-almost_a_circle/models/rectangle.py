@@ -52,7 +52,7 @@ class Rectangle(Base):
                 name (str): the name of variable.
                 value (int): the value of the variable.
         """
-        if (type(value) != int):
+        if (not value or type(value) != int):
             raise TypeError(f"{name} must be an integer")
 
     def checkValue(self, name, value):
