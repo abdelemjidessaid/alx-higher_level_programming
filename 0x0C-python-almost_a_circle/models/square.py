@@ -20,8 +20,7 @@ class Square(Rectangle):
                 id (int): the instance id.
         """
         super().__init__(size, size, x, y, id)
-        self.validateType("size", size)
-        self.validateValue("size", size)
+        self.validation("size", size)
         self.size = size
 
     def __str__(self):
@@ -53,6 +52,7 @@ class Square(Rectangle):
             Args:
                 value (int): the new value of size.
         """
+        self.validation("size", value)
         self.width = value
         self.height = value
 
