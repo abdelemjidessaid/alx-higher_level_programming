@@ -170,6 +170,8 @@ class Base:
             Return:
                 list of objects.
         """
+        if (not json_string or len(json_string) == 0):
+            return ([])
         return (json.loads(json_string))
 
     @staticmethod
