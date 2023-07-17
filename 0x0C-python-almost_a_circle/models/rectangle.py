@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """ The rectangle module """
 from .base import Base
 

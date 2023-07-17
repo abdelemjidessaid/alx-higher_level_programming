@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """ The square module """
 from .rectangle import Rectangle
 
