@@ -22,7 +22,8 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
         self.checkType("size", size)
         self.checkValue("size", size)
-        self.size = size
+        self.width = size
+        self.height = size
 
     def __str__(self):
         """
