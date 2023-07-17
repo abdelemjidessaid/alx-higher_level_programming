@@ -53,7 +53,8 @@ class Square(Rectangle):
             Args:
                 value (int): the new value of size.
         """
-        self.validation("size", value)
+        self.checkType("size", value)
+        self.checkValue("size", value)
         self.width = value
         self.height = value
 
