@@ -22,15 +22,9 @@ class Rectangle(Base):
         """
 
         super().__init__(id)
-        self.validateType("width", width)
-        self.validateValue("width", width)
         self.__width = width
-        self.validateType("height", height)
-        self.validateValue("width", height)
         self.__height = height
-        self.validateValue("x", x)
         self.__x = x
-        self.validateValue("y", y)
         self.__y = y
 
     def __str__(self):
@@ -177,7 +171,7 @@ class Rectangle(Base):
                 value (int): the new value of height.
         """
         self.validateType("height", value)
-        self.validateValue("height", value)
+        self.validateValue("width", value)
         self.__height = value
 
     @property
@@ -198,7 +192,6 @@ class Rectangle(Base):
             Args:
                 value (int): the new value of x attribute.
         """
-        self.validateType("x", value)
         self.validateValue("x", value)
         self.__x = value
 
@@ -220,6 +213,5 @@ class Rectangle(Base):
             Args:
                 value (int): the new value of y attr.
         """
-        self.validateType("y", value)
         self.validateValue("y", value)
         self.__y = value
