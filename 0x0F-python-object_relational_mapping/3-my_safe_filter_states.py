@@ -5,7 +5,7 @@ import MySQLdb
 
 
 """
-    my_filter_state Module
+    my_safe_filter_states Module
     this program search for a keyword in a table from a database.
 """
 
@@ -22,8 +22,8 @@ def main():
     db = MySQLdb.connect(host="localhost", port=3306,
                          user=username, passwd=password, db=db_name)
     cursor = db.cursor()
-    cursor.execute(
-        f"SELECT * FROM state WHERE name LIKE BINARY '{state_name}' ORDER id ASC")
+    query = "SELECT * FROM state WHERE name = %s ORDER id ASC"
+    cursor.execute(query, (state_name, ))
 
     rows = cursor.fetchall()
 
