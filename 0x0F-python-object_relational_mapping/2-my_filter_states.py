@@ -23,7 +23,7 @@ def main():
                          user=username, passwd=password, db=db_name)
     cursor = db.cursor()
     cursor.execute(
-        f"SELECT * FROM state WHERE name LIKE BINARY '{state_name}' ORDER id ASC")
+        f"SELECT * FROM state WHERE name LIKE BINARY '{state_name}' ORDER BY id ASC")
 
     rows = cursor.fetchall()
 
