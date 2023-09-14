@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from MySQLdb import _mysql
+import MySQLdb
 import sys
 
 """
@@ -16,8 +16,8 @@ def main():
     password = sys.argv[2]
     db_name = sys.argv[3]
 
-    db = _mysql.connect(host="localhost", user=username,
-                        password=password, database=db_name, port=3306)
+    db = MySQLdb.connect(host="localhost", user=username,
+                         passwd=password, db=db_name, port=3306)
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
     rows = cursor.fetchall()
