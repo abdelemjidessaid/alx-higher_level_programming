@@ -7,10 +7,8 @@
 """
 
 
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column
-from sqlalchemy import Integer
-from sqlalchemy import String
 
 
 Base = declarative_base()
