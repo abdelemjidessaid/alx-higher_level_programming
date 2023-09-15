@@ -2,6 +2,8 @@
 """
 cities_by_state Module
 this program lists all cities from cities table in a database.
+usage:
+    ./4-cities_by_state 1 2 3
 args:
     1: mysql username
     2: mysql password
@@ -16,7 +18,8 @@ if __name__ == "__main__":
         port=3306,
         user=argv[1],
         passwd=argv[2],
-        db=argv[3]
+        db=argv[3],
+        charset="utf-8"
     )
 
     cursor = conn.cursor()
