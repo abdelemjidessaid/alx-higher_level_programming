@@ -1,28 +1,26 @@
 #!/usr/bin/python3
-
+"""
+my_filter_state Module
+this program search for a keyword in a table from a database.
+Usage:
+    ./2-my_filter_states mysql_user mysql_passwd mysql_db state_name
+"""
 import sys
 import MySQLdb
 
-
-"""
-    my_filter_state Module
-    this program search for a keyword in a table from a database.
-"""
-
-
-def main():
-    """
-        main function is the entry point of program.
-    """
+if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
     state_name = sys.argv[4]
 
-    db = MySQLdb.connect(host="localhost", port=3306,
-                         user=username, passwd=password, db=db_name)
+    db = MySQLdb.connect(
+        host="localhost",
+        user=username,
+        passwd=password,
+        db=db_name)
     cursor = db.cursor()
-    query = """
+    query = f"""
         SELECT * FROM state
         WHERE name LIKE BINARY '{state_name}'
         ORDER BY id ASC"""
@@ -35,7 +33,3 @@ def main():
 
     cursor.close()
     db.close()
-
-
-if __name__ == "__main__":
-    main()
