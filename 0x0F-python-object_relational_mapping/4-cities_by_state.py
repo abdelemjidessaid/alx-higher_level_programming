@@ -1,24 +1,21 @@
 #!/usr/bin/python3
 """
-Lists all cities of the database hbtn_0e_4_usa, ordered by city id.
-Usage: ./4-cities_by_state.py <mysql username> \
-                              <mysql password> \
-                              <database name>
+cities_by_state Module
+this program lists all cities from cities table in a database.
+usage:
+    ./4-cities_by_state 1 2 3
+args:
+    1: mysql username
+    2: mysql password
+    3: database name
 """
 from sys import argv
 import MySQLdb
 
 if __name__ == "__main__":
-    conn = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        user=argv[1],
-        passwd=argv[2],
-        db=argv[3],
-        charset="utf-8"
-    )
+    db = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
 
-    cursor = conn.cursor()
+    cursor = db.cursor()
     query = """
     SELECT `c`.`id`, `c`.`name`, `s`.`name`
     FROM `cities` as `c`
