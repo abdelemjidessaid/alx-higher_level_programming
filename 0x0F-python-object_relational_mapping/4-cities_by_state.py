@@ -24,9 +24,11 @@ if __name__ == "__main__":
 
     cursor = conn.cursor()
     query = """
-    SELECT c.id, c.name FROM state s, cities c
-    WHERE c.state_id = s.id
-    ORDER BY id ASC
+    SELECT `c`.`id`, `c`.`name`, `s`.`name`
+    FROM `cities` as `c`
+    INNER JOIN `states` as `s`
+    ON `c`.`state_id` = `s`.`id`
+    ORDER BY `c`.`id`
     """
     cursor.execute(query)
 
