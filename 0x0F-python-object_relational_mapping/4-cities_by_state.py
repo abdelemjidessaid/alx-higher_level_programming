@@ -1,13 +1,9 @@
 #!/usr/bin/python3
 """
-cities_by_state Module
-this program lists all cities from cities table in a database.
-usage:
-    ./4-cities_by_state 1 2 3
-args:
-    1: mysql username
-    2: mysql password
-    3: database name
+Lists all cities of the database hbtn_0e_4_usa, ordered by city id.
+Usage: ./4-cities_by_state.py <mysql username> \
+                              <mysql password> \
+                              <database name>
 """
 from sys import argv
 import MySQLdb
