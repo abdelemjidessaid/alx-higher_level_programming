@@ -1,33 +1,22 @@
 #!/usr/bin/python3
-
-import sys
+"""
+cities_by_state Module
+this program lists all cities from cities table in a database.
+args:
+    1: mysql username
+    2: mysql password
+    3: database name
+"""
+from sys import argv
 import MySQLdb
 
-
-"""
-    cities_by_state Module
-    this program lists all cities from cities table in a database.
-    args:
-        1: mysql username
-        2: mysql password
-        3: database name
-"""
-
-
-def main():
-    """
-        function main is the entry point of program.
-    """
-    username = sys.argv[1]
-    password = sys.argv[2]
-    db_name = sys.argv[3]
-
+if __name__ == "__main__":
     conn = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=username,
-        passwd=password,
-        db=db_name
+        user=argv[1],
+        passwd=argv[2],
+        db=argv[3]
     )
 
     cursor = conn.cursor()
@@ -44,7 +33,3 @@ def main():
 
     cursor.close()
     conn.close()
-
-
-if __name__ == "__main__":
-    main()
