@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-
-
 """
     model_state Module.
+    Class model of state used to store and fetch data from
+    mysql database.
 """
-
-
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column
 from sqlalchemy import Integer
@@ -21,14 +19,5 @@ class State(Base):
         to create states in MySQL databases.
     """
     __tablename = "states"
-    id = Column(
-        Integer,
-        primary_key=True,
-        unique=True,
-        autoincrement=True,
-        nullable=False
-    )
-    name = Column(
-        String(128),
-        nullable=False
-    )
+    id = Column(Integer, primary_key=True)
+    name = Column(String(128), nullable=False)
