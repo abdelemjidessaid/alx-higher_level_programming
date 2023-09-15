@@ -32,8 +32,8 @@ def main():
 
     cursor = conn.cursor()
     query = """
-    SELECT c.id, c.name FROM state s, cities c 
-    WHERE c.state_id = s.id 
+    SELECT c.id, c.name FROM state s, cities c
+    WHERE c.state_id = s.id
     ORDER BY id ASC
     """
     cursor.execute(query)

@@ -22,8 +22,11 @@ def main():
     db = MySQLdb.connect(host="localhost", port=3306,
                          user=username, passwd=password, db=db_name)
     cursor = db.cursor()
-    cursor.execute(
-        f"SELECT * FROM state WHERE name LIKE BINARY '{state_name}' ORDER BY id ASC")
+    query = """
+        SELECT * FROM state
+        WHERE name LIKE BINARY '{state_name}'
+        ORDER BY id ASC"""
+    cursor.execute(query)
 
     rows = cursor.fetchall()
 
