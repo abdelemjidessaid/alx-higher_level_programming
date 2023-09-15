@@ -24,13 +24,16 @@ if __name__ == '__main__':
         pool_pre_ping=True
     )
 
-    Session = sessionmaker(State)
+    Session = sessionmaker(bind=State)
     Base.metadata.create_all(engine)
     session = Session()
 
     result = session.query(State).filter(
         State.name == argv[4]
     ).one_or_none()
-    print(result)
+    if result is None:
+        print("Not found")
+    else:
+        print(result)
 
     session.close()
