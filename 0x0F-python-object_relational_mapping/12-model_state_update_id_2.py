@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """
-model_state_insert Module
-Program that adds the State object “Louisiana” to the database hbtn_0e_6_usa
-Usage:
-    ./11-model_state_insert <mysql username> <mysql password> <database name>
+    A script that changes teh name of a State object in hbtn_0e_6_usa
+    name of State where id = 2 to New Mexico
+    Username, password, dbname will be passed as arguments to the script.
 """
 
 
@@ -22,10 +21,8 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     session = Session()
 
-    session.add(State(name='Louisiana'))
+    rename_state = session.query(State).filter(State.id == 2).first()
+    rename_state.name = 'New Mexico'
     session.commit()
-
-    state_add = session.query(State).filter(State.name == 'Louisiana').one()
-    print(state_add.id)
 
     session.close()
