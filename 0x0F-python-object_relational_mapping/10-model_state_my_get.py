@@ -1,39 +1,33 @@
 #!/usr/bin/python3
 """
-model_state_my_get Module
-Program that prints a state given as an argument.
-Usage:
-    ./10-model_state_my_get 1 2 3 4
-    1: mysql username
-    2: mysql password
-    3: database name
-    4: state name to search
+    A script that prints the State object with the name passed as an argument
+    from hbtn_0e_6_usa
+    Username, password, dbname and name to search
+    will be passed as arguments to the script.
 """
 
 
-from model_state import State, Base
-from sys import argv
-from sqlalchemy import create_engine
+import sys
+from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
-
+from sqlalchemy import create_engine
 
 if __name__ == '__main__':
     engine = create_engine(
-        "mysql+mysqldb://{}:{}@localhost:3306/{}"
-        .format(argv[1], argv[2], argv[3]),
-        pool_pre_ping=True
+        'mysql+mysqldb://{}:{}@localhost:3306/{}'
+        .format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True
     )
 
     Session = sessionmaker(bind=engine)
     Base.metadata.create_all(engine)
     session = Session()
-
-    result = session.query(State).filter(
-        State.name == argv[4]
+    states = session.query(State).filter(
+        State.name == sys.argv[4]
     ).one_or_none()
-    if result is None:
+
+    if states is None:
         print("Not found")
     else:
-        print(result)
+        print(states.id)
 
     session.close()
