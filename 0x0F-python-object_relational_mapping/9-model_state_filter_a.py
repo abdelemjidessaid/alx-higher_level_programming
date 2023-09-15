@@ -1,5 +1,4 @@
 #!usr/bin/python3
-
 """
 model_state_filter Module
 program that prints all state that starts with letter 'a'
@@ -23,7 +22,9 @@ if __name__ == '__main__':
     Base.metadata.create_all(State)
     session = Session()
 
-    states = session.query(State).filter(State.name.like('%a%')).all()
+    states = session.query(State).filter(
+        State.name.like('%a%')
+    ).order_by(State.id).all()
     for state in states:
         print("{}: {}".format(state.id, state.name))
 
