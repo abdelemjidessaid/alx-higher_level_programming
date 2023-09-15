@@ -1,9 +1,12 @@
 #!/usr/bin/python3
+
 """
     model_state Module.
     Class model of state used to store and fetch data from
     mysql database.
 """
+
+
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column
 from sqlalchemy import Integer
