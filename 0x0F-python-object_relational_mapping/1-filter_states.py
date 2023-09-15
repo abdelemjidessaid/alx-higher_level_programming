@@ -1,20 +1,18 @@
 #!/usr/bin/python3
 
-import sys
-import MySQLdb
-
-
 """
     filter_state Module
     this program fetch all state names from state table,
     and display it.
+    Usage:
+        Usage: ./1-filter_states.py <mysql username> \
+                             <mysql password> \
+                             <database name>
 """
+import sys
+import MySQLdb
 
-
-def main():
-    """
-        main function the entry point of program.
-    """
+if __name__ == "__main__":
     user = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
@@ -23,7 +21,7 @@ def main():
                          user=user, passwd=password, db=db_name)
     cursor = db.cursor()
     cursor.execute(
-        "SELECT * FROM state WHERE name LIKE 'N%' ORDER BY id ASC"
+        "SELECT * FROM `state` WHERE `name` LIKE 'N%' ORDER BY `id` ASC"
     )
 
     rows = cursor.fetchall()
@@ -33,7 +31,3 @@ def main():
 
     cursor.close()
     db.close()
-
-
-if __name__ == "__main__":
-    main()
