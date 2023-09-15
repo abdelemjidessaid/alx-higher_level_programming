@@ -29,8 +29,8 @@ if __name__ == '__main__':
     session = Session()
 
     result = session.query(State).filter(
-        State.name.like('{:s}'.format(argv[4]))
-    )
+        State.name == argv[4]
+    ).one_or_none()
     print(result)
 
     session.close()
