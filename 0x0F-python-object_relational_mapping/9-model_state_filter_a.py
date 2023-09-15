@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """
 model_state_filter Module
 program that prints all state that starts with letter 'a'
