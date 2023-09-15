@@ -24,7 +24,7 @@ if __name__ == '__main__':
         pool_pre_ping=True
     )
 
-    Session = sessionmaker(bind=State)
+    Session = sessionmaker(bind=engine)
     Base.metadata.create_all(engine)
     session = Session()
 
@@ -34,6 +34,6 @@ if __name__ == '__main__':
     if result is None:
         print("Not found")
     else:
-        print(result)
+    print(result)
 
     session.close()
