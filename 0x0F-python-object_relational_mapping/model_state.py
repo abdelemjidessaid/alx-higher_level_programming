@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-
 """
-model_state Module.
-Class model of state used to store and fetch data from
-mysql database.
+Defines a State model.
+Inherits from SQLAlchemy Base and links to the MySQL table states.
 """
 
 from sqlalchemy import Column, Integer, String
@@ -18,6 +16,6 @@ class State(Base):
     id (sqlalchemy.Integer): The state's id.
     name (sqlalchemy.String): The state's name.
     """
-    __tablename = "states"
+    __tablename__ = "states"
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
