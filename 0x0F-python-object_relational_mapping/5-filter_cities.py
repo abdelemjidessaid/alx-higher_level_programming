@@ -1,37 +1,21 @@
 #!/usr/bin/python3
-
-import sys
-import MySQLdb
-
-
 """
     filter_cities Module.
     this program lists cities of a given state.
 
+    usage: ./5-filter_cities 1 2 3 4
     args:
         1: mysql username
         2: mysql password
         3: database name
         4: state name
 """
+from sys import argv
+import MySQLdb
 
-
-def main():
-    """
-        main function is the entry point of program.
-    """
-    username = sys.argv[1]
-    password = sys.argv[2]
-    db_name = sys.argv[3]
-    state_name = sys.argv[4]
-
-    conn = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        db=db_name,
-        user=username,
-        passwd=password
-    )
+if __name__ == "__main__":
+    state_name = argv[4]
+    conn = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
 
     cursor = conn.cursor()
     query = """SELECT cities.name
@@ -46,7 +30,3 @@ def main():
 
     cursor.close()
     conn.close()
-
-
-if __name__ == "__main__":
-    main()
