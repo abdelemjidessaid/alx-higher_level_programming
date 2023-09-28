@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # counts the body responses.
 curl -sI "$1" | grep -i Content-Length | cut -d " " -f 2
