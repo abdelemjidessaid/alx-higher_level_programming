@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 # counts the body responses.
-curl -sI "$1" | grep -i Content-Length | cut -d " " -f2
+url=$1
+response=$(curl -s -o /dev/null -w "%{size_download}" $url)
+echo "$response"
