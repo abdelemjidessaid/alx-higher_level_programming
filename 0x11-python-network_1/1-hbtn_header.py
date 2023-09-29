@@ -18,4 +18,4 @@ if __name__ == '__main__':
     request = urllib.request.Request(url)
     # filter the content and get the header of `X-Request-Id`
     with urllib.request.urlopen(request) as res:
-        print(dict(res.headers)['X-Request-Id'])
+        print(dict(res.headers).get('X-Request-Id'))
