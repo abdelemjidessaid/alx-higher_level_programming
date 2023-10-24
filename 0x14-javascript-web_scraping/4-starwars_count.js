@@ -5,7 +5,7 @@ request(url, function (err, res, body) {
   if (!err) {
     const data = JSON.parse(body).results;
     console.log(data.reduce((count, film) => {
-      return film.characters.find((character) => character.endsWith('18/'))
+      return film.characters.find((character) => character.endsWith('/18/'))
         ? count + 1
         : count;
     }, 0));
