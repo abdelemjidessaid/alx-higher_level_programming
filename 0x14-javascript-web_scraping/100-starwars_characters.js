@@ -10,9 +10,9 @@ const request = require('request');
 const url = `https://swapi-api.alx-tools.com/api/films/${process.argv[2]}`;
 
 // print the character names
-function print_characters (characters=[]) {
-  characters.forEach(char_url => {
-    request(char_url, function (err, res, body) {
+function printCharacters (characters) {
+  characters.forEach(char => {
+    request(char, function (err, res, body) {
       if (!err) {
         const name = JSON.parse(body).name;
         console.log(name);
@@ -25,6 +25,6 @@ function print_characters (characters=[]) {
 request(url, function (err, res, body) {
   if (!err) {
     const data = JSON.parse(body);
-    print_characters(data.characters);
+    printCharacters(data.characters);
   }
 });
