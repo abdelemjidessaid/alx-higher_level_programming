@@ -6,13 +6,11 @@ request(url, function (err, res, body) {
   if (res.statusCode === 200) {
     const data = JSON.parse(body);
     let count = 0;
-    for (i = 0; i < data.results.length; i++) {
+    for (let i = 0; i < data.results.length; i++) {
       if (data.results[i].characters.includes(character)) {
         count++;
       }
     }
     console.log(count);
-  } else {
-    console.error(err);
   }
 });
